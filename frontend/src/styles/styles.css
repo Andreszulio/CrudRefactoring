@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+
+body {
+  min-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+	font-weight: 400;
+  background-image: linear-gradient(-0deg, #0e0d0d 20%, #4ba4ec 90%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 1px 5px 0px rgb(134, 134, 134);
+}
+
+.container {
+	background-color: #fff;
+	width: 80vw;
+	margin: 40px auto;
+	padding: 40px;
+	border-radius: 0px;
+  box-shadow: 0px 1px 1px 0px #00004b;
+}
+
+header {
+	display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+main {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+.container-text .title {
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.container-text {
+  font-weight: bold;
+  color: #F39C12;
+  font-style: normal;
+}
+
+.container-text p {
+  margin-bottom: 40px;
+  line-height: 36px;
+}
+
+.btn-link {
+  display: inline-block;
+  padding: 10px 30px;
+	border-radius: 0px;
+  margin-right: 10px;
+  text-decoration: none;
+  background: #f2f2f2;
+}
+
+.btn-link:hover,
+.btn-link.active {
+	color: #fff;
+	background: #5b4a9a;
+}
+
+.todoList{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background: transparent;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border-radius: 5px;
+  box-shadow: inset 0px 10px 60px 0px #26126e,
+              0px 10px 30px 0px #26126e;
+  margin: 70px 0;
+}
+
+.titleCreate{
+  text-align: center;
+}
+
+.inputTodo{
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  box-shadow: inset 0px 1px 3px 0px #5b4a9a,
+              0px 1px 3px 0px #5b4a9a;
+  padding-left: 15px;
+}
+
+.inputTodo::placeholder{
+  color: #333;
+}
+
+.inputTodo:focus{
+  border: none;
+}
+
+.containerButtons{
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons{
+  position: relative;
+  padding: 20px 50px;
+  display: block;
+  text-transform: uppercase;
+  width: 200px;
+  overflow: hidden;
+  background: #4ba4ec;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.buttonUpdate{
+  width: 250px;
+}
+
+.buttons span{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.buttons .liquid{
+  position: absolute;
+  left: 0;
+  top: -80px;
+  width: 200px;
+  height: 200px;
+  background-repeat: white;
+  transition: 0.5s;
+}
+
+.buttons .liquid::before,
+.buttons .liquid::after{
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 0;
+  left: 50%;
+  transform: translate(-75%,-50%);
+}
+
+.buttons .liquid::before{
+  border-radius: 45%;
+  background:  #4ba4ec;
+ 
+}
+
+.buttons .liquid::after{
+  border-radius: 40%;
+  background:  #4ba4ec;
+
+  
+}
+
+table {
+  background-color: #fff;
+	width: 80vw;
+  box-shadow: 0px 1px 1px 0px #7e7e80;
+  text-align: left;
+  line-height: 40px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 50px auto;
+  border-radius: .25rem;
+  padding: 35px;
+}
+
+th {
+  font-weight: 500;
+}
+
+thead tr {
+  border-bottom: 3px solid #ddd;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #f2f2f2;
+  cursor: default;
+}
+
+tbody td {
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
+
+
+.button {
+  color: #fff;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-top: -4px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 0px;
+  transition: 0.2s ease;
+}
+
+.edit {
+  background: #dc2a2a;
+}
+
+.delete {
+  background: #0a79df;
+}
+
+.edit:hover,
+.delete:hover{
+  transform: scale(1.1);
+}
+
+.ParticlesJS{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 915px) {
+  main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main .container-img {
+    margin-bottom: 40px;
+  }
+  .container{
+    width: 500px;
+	  max-width: 500px;
+	  margin: 40px auto;
+	  padding: 40px;
+  }
+}
